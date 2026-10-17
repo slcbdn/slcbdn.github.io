@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gmail Triage</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1d1d1f; --bg: #fff; --muted: #6e6e73; --link: #0a66c2; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #f2f2f2; --bg: #161617; --muted: #a1a1a6; --link: #6cb4ff; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
+  h1 { font-size: 1.6rem; margin: 0 0 8px; }
+  p.sub { color: var(--muted); margin-top: 0; }
+  a { color: var(--link); }
+  footer { margin-top: 40px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Gmail Triage</h1>
+  <p class="sub">A personal, single-user tool for keeping one Gmail inbox tidy.</p>
+
+  <p>Gmail Triage runs once a day on a server operated by its author. It looks at the sender and subject of newly
+  received messages in the author's own Gmail account, scores each one as "keep" or "delete candidate", and sends
+  the author a summary in a private Telegram chat.</p>
+
+  <p>Nothing is removed automatically. Messages are moved to Gmail's Trash only after the author explicitly approves
+  them in that chat, and they can be restored from Trash for 30 days. The app never permanently deletes mail, never
+  sends mail, and is not offered to anyone other than its author.</p>
+
+  <p>See the <a href="privacy.html">privacy policy</a> for exactly what data is accessed and where it goes.</p>
+
+  <footer>Contact: <a href="mailto:cwlim822@gmail.com">cwlim822@gmail.com</a></footer>
+</main>
+</body>
+</html>
