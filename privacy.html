@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gmail Triage Privacy</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1d1d1f; --bg: #fff; --muted: #6e6e73; --link: #0a66c2; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #f2f2f2; --bg: #161617; --muted: #a1a1a6; --link: #6cb4ff; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.1rem; margin-top: 28px; }
+  p.sub { color: var(--muted); margin-top: 0; }
+  a { color: var(--link); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy — Gmail Triage</h1>
+  <p class="sub">Last updated: October 18, 2026</p>
+
+  <p>Gmail Triage is a personal tool used only by its author (Changwoo Lim) on the author's own Gmail account. It is not
+  offered to the public and has no other users.</p>
+
+  <h2>Data accessed</h2>
+  <p>Through the Gmail API (scope <code>https://www.googleapis.com/auth/gmail.modify</code>) the app reads the
+  <strong>sender</strong>, <strong>subject</strong>, labels and message ID of recently received messages. It does
+  not read message bodies or attachments.</p>
+
+  <h2>How the data is used</h2>
+  <ul>
+    <li>Sender and subject are sent to the OpenRouter API (Perplexity Decider model) to score whether each message
+    should be kept or is a delete candidate.</li>
+    <li>The resulting summary is sent to the author's own private Telegram chat.</li>
+    <li>When the author approves, the app moves the approved messages to Gmail's Trash. It never permanently
+    deletes mail and never sends, forwards or modifies the content of any message.</li>
+  </ul>
+
+  <h2>Storage and sharing</h2>
+  <p>The OAuth token and a short list of the latest delete candidates (message ID, sender, subject, score) are stored
+  on the author's private server with owner-only file permissions. Records older than 14 days are discarded. No data
+  is sold, used for advertising, or shared with anyone other than the processing services named above.</p>
+
+  <h2>Google API Services User Data Policy</h2>
+  <p>Gmail Triage's use and transfer of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+  including the Limited Use requirements.</p>
+
+  <h2>Revoking access</h2>
+  <p>Access can be revoked at any time at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:cwlim822@gmail.com">cwlim822@gmail.com</a></p>
+</main>
+</body>
+</html>
